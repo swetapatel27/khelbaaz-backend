@@ -1,0 +1,8 @@
+/node_modules
+/public/deposits
+/public/images
+/public/banners
+/public/payments
+/public/popup
+/public/withdraws
+.env
