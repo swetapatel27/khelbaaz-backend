@@ -634,7 +634,7 @@ async function fetchAndInsertMarketOdds(
             let sql_query =
               "insert into marketodds(event_id,market_id,event_name,runner1,runner2,status,inplay,back0_price,back0_size,lay0_price,lay0_size,back1_price,back1_size,lay1_price,lay1_size,is_suspended0,is_suspended1)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)on duplicate key update event_id=?,market_id=?,event_name=?,runner1=?,runner2=?,status=?,inplay=?,back0_price=?,back0_size=?,lay0_price=?,lay0_size=?,back1_price=?,back1_size=?,lay1_price=?,lay1_size=?,is_suspended0=1,is_suspended1=1";
             let values = [
-              market.eventid,
+              eventId,
               market.marketId,
               event_name,
               runner1,
@@ -651,7 +651,7 @@ async function fetchAndInsertMarketOdds(
               0,
               1,
               1,
-              market.eventid,
+              eventId,
               market.marketId,
               event_name,
               runner1,
